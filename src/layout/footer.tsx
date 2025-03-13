@@ -8,13 +8,7 @@ export const Footer = () => {
                     <div className="w-full flex flex-col justify-center items-center">
                         <h3 className="text-lg font-semibold mb-4">HỖ TRỢ KHÁCH HÀNG</h3>
                         <ul className="space-y-2 text-sm">
-                            <li>CS1: 95 Phan Đình Phùng, P2, TP. Cà Mau</li>
-                            <li>CS2: 686 QLPH, P. Tân Thành, TP. Cà Mau</li>
-                            <li>CS3: 352 Cao Thắng, P12, Q10, TP. HCM</li>
-                            <li>CS4: 146E Trần Văn Hoài, P. Xuân Khánh, Q. Ninh Kiều, TP. Cần Thơ</li>
-                            <li>Hotline: <a href="tel:02903717979" className="text-md">0290 371 79 79</a> - <a href="tel:0941826556" className="text-md">0941 82 6556</a> - <a href="tel:0784611486" className="text-md">0784 611 486</a> - <a href="tel:0943122565" className="text-md">0943 122 565</a></li>
-                            <li>Zalo: <a href="tel:0941826556" className="text-md">0941 82 6556</a> - <a href="tel:0784611486" className="text-md">0784 611 486</a> - <a href="tel:0943122565" className="text-md">0943 122 565</a></li>
-                            <li>Email: <a href="mailto:Tuananhcm06@gmail.com" className="text-md">Tuananhcm06@gmail.com</a></li>
+                            <li>Cần Thơ - Cà Mau</li>
                         </ul>
                     </div>
                     {/* <div>
@@ -68,13 +62,13 @@ export const Footer = () => {
                         <a href="//www.dmca.com/Protection/Status.aspx?ID=139d361f-018e-4490-8bac-383d066e54fb" title="DMCA.com Protection Status" className="dmca-badge"> <img src="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=139d361f-018e-4490-8bac-383d066e54fb" alt="DMCA.com Protection Status" /></a>
                     </div> */}
                 </div>
-                <div className="w-full mt-12 pb-4 flex flex-col justify-center items-center">
+                {/* <div className="w-full mt-12 pb-4 flex flex-col justify-center items-center">
                     <div className="text-sm">
                         <div className="text-center">
                             <p>Copyright 2024 Ảnh Màu Tuấn Anh</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
             <script async src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
         </footer>
