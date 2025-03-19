@@ -5,19 +5,19 @@ export const Header = () => {
     return (
         <header>
             <nav
-  className="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
-  style={{
-    backgroundImage: "linear-gradient(45deg, #1E90FF, #FF7F50)"
-  }}
->
-  <div className="flex flex-wrap justify-center gap-10 items-center mx-auto max-w-screen-xl">
-    <a href="/" className="flex items-center">
-      <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
-        ẢNH MÀU TUẤN ANH
-      </span>
-    </a>
-  </div>
-</nav>
+                className="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
+                style={{
+                    backgroundImage: "linear-gradient(45deg, #1E90FF, #FF7F50)"
+                }}
+            >
+                <div className="flex flex-wrap justify-center gap-10 items-center mx-auto max-w-screen-xl">
+                    <a href="/" className="flex items-center">
+                        <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
+                            ẢNH MÀU TUẤN ANH
+                        </span>
+                    </a>
+                </div>
+            </nav>
 
 
             {/* <nav className="bg-[#fff] border-gray-200 py-2.5 dark:bg-gray-800 flex justify-center">

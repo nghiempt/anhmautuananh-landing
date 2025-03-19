@@ -31,11 +31,86 @@ interface Service {
   title: string;
 }
 
+const data = [
+  {
+    id: 1,
+    name: "ALBUM BÌA GÓI - RUỘT SIÊU SẮC NÉT, TRÓNG XƯỚC",
+    image: "https://www.inanhtructuyen.com/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Ffarmcode%2Fimage%2Fupload%2Fv1740140859%2Fiatt%2Fygfqwmh0yafhdweetzwj.png&w=3840&q=75",
+  },
+  {
+    id: 1,
+    name: "ALBUM BÌA HỢP - RUỘT TRÁNG GƯƠNG",
+    image: "https://www.inanhtructuyen.com/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Ffarmcode%2Fimage%2Fupload%2Fv1740141934%2Fiatt%2Fwgjdch7woupupe7n34vg.png&w=3840&q=75",
+  },
+  {
+    id: 1,
+    name: "ẢNH 3D- 4K ĐÍNH ĐÁ",
+    image: "https://www.inanhtructuyen.com/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Ffarmcode%2Fimage%2Fupload%2Fv1740142196%2Fiatt%2Fdujqhncspdeegtnaseir.jpg&w=3840&q=75",
+  },
+  {
+    id: 1,
+    name: "ALBUM RUỘT KIẾNG CÓ VÁCH NGĂN",
+    image: "https://www.inanhtructuyen.com/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Ffarmcode%2Fimage%2Fupload%2Fv1740142121%2Fiatt%2Ffouctxi5ubjhlrhzopvc.png&w=3840&q=75",
+  },
+  {
+    id: 1,
+    name: "ALBUM CÁN MÀNG BÌA HƠP",
+    image: "https://www.inanhtructuyen.com/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Ffarmcode%2Fimage%2Fupload%2Fv1740142056%2Fiatt%2Fhng00ydlj3ojz8khitoj.png&w=3840&q=75",
+  },
+  {
+    id: 1,
+    name: "ALBUM BÌA TRÁNG GƯƠNG - RUỘT SIÊU SẮC NÉT",
+    image: "https://www.inanhtructuyen.com/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Ffarmcode%2Fimage%2Fupload%2Fv1740141994%2Fiatt%2Fuvvfovfpkafgqcdojv4a.png&w=3840&q=75",
+  },
+  {
+    id: 1,
+    name: "ẢNH 3D VÔ CỰC HÀNG QUỐC",
+    image: "https://www.inanhtructuyen.com/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Ffarmcode%2Fimage%2Fupload%2Fv1740142258%2Fiatt%2Fmlbtedtsoffjw44fyuxf.jpg&w=3840&q=75",
+  },
+  {
+    id: 1,
+    name: "ẢNH 3D VÔ CỰC TITAN",
+    image: "https://www.inanhtructuyen.com/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Ffarmcode%2Fimage%2Fupload%2Fv1740142324%2Fiatt%2Foim7diiq6kv8tvmgopqn.jpg&w=3840&q=75",
+  },
+  {
+    id: 1,
+    name: "IN ẢNH LỤA",
+    image: "https://www.inanhtructuyen.com/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Ffarmcode%2Fimage%2Fupload%2Fv1740142554%2Fiatt%2Fa8eyd1m5dgibqs7qcpvb.jpg&w=3840&q=75",
+  },
+  {
+    id: 1,
+    name: "ALBUM BÌA GÓI CÁN MÀNG",
+    image: "https://www.inanhtructuyen.com/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Ffarmcode%2Fimage%2Fupload%2Fv1740141876%2Fiatt%2Fotsrvknhbtk9aczsrefg.png&w=3840&q=75",
+  },
+]
+
 export default function HomePage() {
   return (
     <div className="w-full flex flex-col justify-center">
       <div className="w-full">
         <Header />
+        <div className="w-full flex justify-center items-center p-4">
+          <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+            {
+              data?.map((item, index) => {
+                return (
+                  <div key={index} className="relative group">
+                    <Image
+                      src={item.image}
+                      alt="logo"
+                      width={1000}
+                      height={0}
+                      className="w-full object-cover rounded-md"
+                    />
+                    <div className="w-full py-2 text-center text-xs md:text-md lg:text-lg opacity-50 absolute bottom-3 md:bottom-4 lg:bottom-5 bg-gray-800 text-white">
+                      {item.name}
+                    </div>
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
         {/* <div className="w-full flex justify-center">
           <div className="flex flex-col w-full md:w-5/6 lg:w-5/6 justify-center">
             <div className="bg-[#4158A6] grid grid-cols-3 lg:grid-cols-6 text-center gap-4 justify-between">
@@ -221,7 +296,7 @@ export default function HomePage() {
             </div>
           </div>
         </div> */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   )
