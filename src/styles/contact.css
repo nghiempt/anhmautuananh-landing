@@ -1,0 +1,136 @@
+.swiper-wrapper {
+  height: 580px;
+}
+
+.swiper-pagination-bullet {
+  background: #f5ecd5 !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+.image-gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  bottom: 0;
+}
+
+.image-gallery-thumbnails-wrapper {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 10px;
+}
+
+.image-gallery-thumbnail {
+  border: 2px solid transparent;
+  transition: border 0.3s ease-in-out;
+}
+
+.image-gallery-thumbnail.active {
+  border: 2px solid orange;
+}
+
+.swiper-pagination-bullet {
+  background-color: black;
+}
+
+.scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+}
+
+.scroll-bar-style::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow {
+  transform: translate(-50%, -50%);
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-bottom: 5px solid #fa812f;
+  border-right: 5px solid #fa812f;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+/* From Uiverse.io by JulanDeAlb */
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}

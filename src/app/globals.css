@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-rgb: 5, 14, 60;
+    --secondary-rgb: 197, 216, 157;
+    --tertiary-rgb: 220, 0, 0;
+    --quaternary-rgb: 220, 0, 0;
+    --fifteenth-rgb: 220, 0, 0;
+    /* 233, 163, 25; */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --font-font-1: "PlusJakartaSans-Regular", sans-serif;
+    --font-font-2: "PlusJakartaSans-Bold", sans-serif;
+    --font-font-4: "PlusJakartaSans-Medium", sans-serif;
+    --font-font-5: "PlusJakartaSans-SemiBold", sans-serif;
+    --font-font-6: "PlusJakartaSans-Light", sans-serif;
+  }
+  .scroll-bar-style::-webkit-scrollbar {
+    display: none;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@keyframes zoomFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-zoomFade {
+  animation: zoomFade 1.2s ease-in-out infinite;
+}
+
+@keyframes zoomIO {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-zoomIO {
+  animation: zoomIO 2s ease-in-out infinite;
+}
+
+@keyframes bellRing {
+  0% {
+    transform: rotate(-15deg);
+  }
+  12.5% {
+    transform: rotate(15deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  37.5% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-bellRing {
+  animation: bellRing 1.1s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.animate-zoomInOut {
+  animation: zoomInOut 1.5s ease-in-out infinite;
+}
+
+@keyframes zoomInOutReverse {
+  0%,
+  100% {
+    transform: scale(0.99);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.animate-zoomInOutReverse {
+  animation: zoomInOutReverse 1.5s ease-in-out infinite;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans-Regular";
+  src: url("./fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans-Bold";
+  src: url("./fonts/PlusJakartaSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans-Light";
+  src: url("./fonts/PlusJakartaSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans-Medium";
+  src: url("./fonts/PlusJakartaSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PlusJakartaSans-SemiBold";
+  src: url("./fonts/PlusJakartaSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-light {
+  font-family: "PlusJakartaSans-Light", sans-serif;
+}
+.font-medium {
+  font-family: "PlusJakartaSans-Medium", sans-serif;
+}
+
+.font-bold {
+  font-family: "PlusJakartaSans-Bold", sans-serif;
+}
+.font-semibold {
+  font-family: "PlusJakartaSans-SemiBold", sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-font-1);
+  }
+  /* Ensure semantic bold elements use the actual bold font family */
+  b,
+  strong {
+    font-family: "PlusJakartaSans-SemiBold", sans-serif;
+    font-weight: 600;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: "#ff0000" !important;
+  color: #ff0000 !important;
+}

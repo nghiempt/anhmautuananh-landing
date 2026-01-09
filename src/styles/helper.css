@@ -1,0 +1,161 @@
+.main > .inp {
+  display: none;
+}
+
+.main {
+  color: white;
+  background-color: #ffb413;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  /* top: 60%; */
+  right: 10px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.arrow {
+  height: 34%;
+  aspect-ratio: 1;
+  margin-block: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.arrow::after,
+.arrow::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2.5px;
+  border-radius: 500px;
+  transform-origin: bottom;
+}
+
+.arrow::after {
+  transform: rotate(35deg) translateX(-0.5px);
+}
+.arrow::before {
+  transform: rotate(-35deg) translateX(0.5px);
+}
+
+.main > .inp:checked + .arrow {
+  transform: rotateX(180deg);
+}
+
+.menu-container {
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  left: -100px;
+  top: -320%;
+  overflow: hidden;
+  transition: all 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.inp:checked ~ .menu-container {
+  opacity: 1;
+  visibility: visible;
+  clip-path: none;
+}
+
+.menu-list {
+  --delay: 0.4s;
+  --trdelay: 0.15s;
+  padding: 8px 10px;
+  border-radius: 30px;
+  transition: transform 0.4s, opacity 0.4s;
+  position: relative;
+  transform: translateY(30px);
+  opacity: 0;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.menu-list::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 95%;
+}
+
+.menu-list:hover {
+  background-color: #f7c04b;
+}
+
+.inp:checked ~ .menu-container .menu-list {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.inp:checked ~ .menu-container .menu-list:nth-child(1) {
+  transition: transform 0.4s var(--delay), opacity 0.4s var(--delay);
+}
+
+.inp:checked ~ .menu-container .menu-list:nth-child(2) {
+  transition: transform 0.4s calc(var(--delay) + (var(--trdelay) * 1)),
+    opacity 0.4s calc(var(--delay) + (var(--trdelay) * 1));
+}
+
+.inp:checked ~ .menu-container .menu-list:nth-child(3) {
+  transition: transform 0.4s calc(var(--delay) + (var(--trdelay) * 2)),
+    opacity 0.4s calc(var(--delay) + (var(--trdelay) * 2));
+}
+
+.inp:checked ~ .menu-container .menu-list:nth-child(4) {
+  transition: transform 0.4s calc(var(--delay) + (var(--trdelay) * 3)),
+    opacity 0.4s calc(var(--delay) + (var(--trdelay) * 3));
+}
+
+.bar-inp {
+  -webkit-appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+.bar {
+  display: flex;
+  height: 50%;
+  width: 20px;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bar-list {
+  --transform: -25%;
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 50px;
+  background-color: white;
+  transition: all 0.4s;
+  position: relative;
+}
+
+.inp:not(:checked) ~ .bar > .top {
+  transform-origin: top right;
+  transform: translateY(var(--transform)) rotate(-45deg);
+}
+
+.inp:not(:checked) ~ .bar > .middle {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.inp:not(:checked) ~ .bar > .bottom {
+  transform-origin: bottom right;
+  transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
+}
