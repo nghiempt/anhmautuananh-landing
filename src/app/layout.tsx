@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Ảnh Màu Tuấn Anh",
     images: [
       {
-        url: "https://res.cloudinary.com/farmcode/image/upload/v1757376935/iatt/bg-full_hahqqi.png",
+        url: "https://res.cloudinary.com/farmcode/image/upload/v1767944095/other/tykq6el6f4ixk1mgg8jr.png",
         width: 1200,
         height: 630,
         alt: "Ảnh Màu Tuấn Anh",
